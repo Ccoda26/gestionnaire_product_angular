@@ -1,0 +1,54 @@
+<!-- update-product-form.component.html -->
+<ng-container *ngIf="product">
+<div class="update-product-form-container">
+  <h2>Modifier un produit :</h2>
+
+  <form (submit)="updateProduct()" method="POST">
+    <div class="form-group">
+      <label>Product ID:</label>
+      <input type="text" name="product_id" [(ngModel)]="product.product_id" disabled>
+    </div>
+
+    <div class="form-group">
+      <label>UID:</label>
+      <input type="text" name="uid" [(ngModel)]="product.uid" required>
+    </div>
+
+    <div class="form-group">
+      <label>Brand:</label>
+      <input type="text" name="brand" [(ngModel)]="product.brand">
+    </div>
+
+    <div class="form-group">
+      <label>Equipment:</label>
+      <input type="text" name="equipment" [(ngModel)]="product.equipment">
+    </div>
+
+    <!-- <div class="form-group">
+      <label>Category:</label>
+      <select name="category" [(ngModel)]="product.category">
+        <option value="category1">Category 1</option>
+        <option value="category2">Category 2</option>
+        <option value="category3">Category 3</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Available:</label>
+      <input type="checkbox" name="available" [(ngModel)]="product.available">
+    </div>
+
+    <div class="form-group">
+      <label>Created At:</label>
+      <input type="date" name="created_at" [(ngModel)]="product.created_at">
+    </div>
+
+    <div class="form-group">
+      <label>Updated At:</label>
+      <input type="date" name="updatedAtColumn" [(ngModel)]="product.updatedAtColumn">
+    </div> -->
+
+    <button type="submit">Enregistrer les modifications</button>
+  </form>
+</div>
+</ng-container>

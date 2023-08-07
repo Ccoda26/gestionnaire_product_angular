@@ -1,0 +1,34 @@
+
+<div class="container">
+    <h2>Ajouter un nouveau produit</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="uid">numéro UID du produit:</label>
+        <input type="text" class="form-control" id="uid" name="uid" [(ngModel)]="productData.uid" required>
+      </div>
+      <div class="form-group">
+        <label for="brand">Marque:</label>
+        <input type="text" class="form-control" id="brand" name="brand" [(ngModel)]="productData.brand">
+      </div>
+      <div class="form-group">
+        <label for="equipment">Équipement:</label>
+        <input type="text" class="form-control" id="equipment" name="equipment" [(ngModel)]="productData.equipment">
+      </div>
+      <div class="form-group">
+        <label for="category">Catégorie:</label>
+        <select class="form-control" id="category" name="category" [(ngModel)]="productData.category">
+          <option value="">Sélectionnez une catégorie</option>
+          <option value="Category 1">Category 1</option>
+          <option value="Category 2">Category 2</option>
+          <option value="Category 3">Category 3</option>
+          <!-- Ajoutez d'autres options de catégorie si nécessaire -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="available">Disponible:</label>
+        <input type="checkbox" class="form-control" id="available" name="available" [(ngModel)]="productData.available">
+      </div>
+      <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+    </form>
+  </div>
+  

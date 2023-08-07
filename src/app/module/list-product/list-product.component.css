@@ -1,0 +1,25 @@
+/* products.component.css */
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    flex: 0 0 calc(30% - 20px); /* Pour afficher 3 produits par ligne */
+    max-width: calc(30% - 20px); /* Pour afficher 3 produits par ligne */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details {
+    margin-bottom: 10px;
+  }
+  
+  .product-actions button {
+    margin-right: 5px;
+  }
+  
